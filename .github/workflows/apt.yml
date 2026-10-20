@@ -24,9 +24,9 @@ jobs:
       - name: Build APT index
         run: |
           set -e
-          sudo apt-get update && sudo apt-get install -y apt-utils
+          sudo apt-get update
+          sudo apt-get install -y apt-utils
           mkdir -p site
-          cp -R debs site/debs 2>/dev/null || true
           find . -type f -name '*.deb' -not -path './site/*' -exec cp {} site/ \;
           cd site
           apt-ftparchive packages . > Packages
@@ -47,5 +47,13 @@ jobs:
         with:
           path: site
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
