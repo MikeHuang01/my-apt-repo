@@ -37,3 +37,5 @@
 ## 说明
 
 本源仅用于个人测试与研究。安装前请确认设备越狱环境（RootHide / Rootless）与 iOS 版本兼容。
+
+Pages 使用 GitHub Actions 发布 APT 索引。
