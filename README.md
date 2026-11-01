@@ -22,13 +22,24 @@
 
 ## 当前收录
 
-| 分类 | 软件包 |
-| --- | --- |
-| roothide packages / 工具 | Filza All-in-One |
-| 应用程序 | Widgy |
-| 插件 | WatchFix |
-| Tweak | StepOfLife |
-| roothide packages | FloatingView |
+| 分类 | 软件包 | 版本 | 适用环境 |
+| --- | --- | --- | --- |
+| roothide packages / 工具 | Filza All-in-One | 4.0.1-4 | RootHide arm64e |
+| 应用程序 | Widgy | 1.0.0 | iOS |
+| 插件 | WatchFix | 2.0.4 | RootHide arm64e |
+| Tweak | StepOfLife | 1.0.0 | iOS |
+| roothide packages | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
+| roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
+
+### Hello 3Q
+
+拦截 App 后台预热（省内存、少杀后台），支持按 Bundle ID 放行指定应用。
+
+- 包名：`cn.zqbb.stopautolaunchapps`
+- 适用环境：RootHide，`iphoneos-arm64e`
+- 依赖：`mobilesubstrate (>= 0.9.5000)`、`firmware (>= 16.0)`
+- 安装后注销一次，配置文件会自动生成：`/var/mobile/Library/Preferences/Hello3Q-allowlist.conf`
+- RootHide 实际路径可用 Filza 搜索 `Hello3Q-allowlist.conf`。将要放行的 App Bundle ID 逐行加入白名单；不在白名单的应用继续拦截。
 
 ## 目录结构
 
@@ -36,6 +47,4 @@
 
 ## 说明
 
-本源仅用于个人测试与研究。安装前请确认设备越狱环境（RootHide / Rootless）与 iOS 版本兼容。
-
-Pages 使用 GitHub Actions 发布 APT 索引。
+本源仅用于个人测试与研究。安装前请确认设备越狱环境（RootHide / Rootless）与 iOS 版本兼容。Pages 使用 GitHub Actions 发布 APT 索引。
