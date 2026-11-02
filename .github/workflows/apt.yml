@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -27,12 +27,19 @@ jobs:
           sudo apt-get install -y apt-utils
           mkdir -p site
           find . -type f -name '*.deb' -not -path './site/*' -exec cp {} site/ \;
-          if [ -f '微信图片_2026-11-01_055300_739.jpg' ]; then cp '微信图片_2026-11-01_055300_739.jpg' site/CydiaIcon.png; fi
+          for icon in 'CydiaIcon.png' '微信图片_2026-11-01_055300_739.jpg' '4a46117aea0e822d3f65b625030a959f.jpg'; do
+            if [ -f "$icon" ]; then cp "$icon" site/CydiaIcon.png; break; fi
+          done
           cd site
           apt-ftparchive packages . > Packages
           gzip -kf Packages
-          apt-ftparchive -o APT::FTPArchive::Release::Origin="MikeHuang01" -o APT::FTPArchive::Release::Label="my-apt-repo" -o APT::FTPArchive::Release::Architectures="iphoneos-arm iphoneos-arm64" -o APT::FTPArchive::Release::Components="." release . > Release
-          printf '架构: iphoneos-arm64 / iphoneos-arm\n组件: .\n' > index.html
+          apt-ftparchive \
+            -o APT::FTPArchive::Release::Origin="MikeHuang01" \
+            -o APT::FTPArchive::Release::Label="my-apt-repo" \
+            -o APT::FTPArchive::Release::Architectures="iphoneos-arm iphoneos-arm64 iphoneos-arm64e" \
+            -o APT::FTPArchive::Release::Components="." \
+            release . > Release
+          printf '架构: iphoneos-arm64e / iphoneos-arm64 / iphoneos-arm\n组件: .\n' > index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
