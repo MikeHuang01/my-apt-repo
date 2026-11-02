@@ -29,6 +29,7 @@
 | 插件 | WatchFix | 2.0.4 | RootHide arm64e |
 | Tweak | StepOfLife | 1.0.0 | iOS |
 | roothide packages | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
+| roothide packages / Tweak | ActionBar Reborn | 1.1-2+mikehuang01.1~beta | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
 
 ### Hello 3Q
