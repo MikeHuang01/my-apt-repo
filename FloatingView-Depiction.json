@@ -1,0 +1,36 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 12,
+          "itemSize": "{160, 347}",
+          "screenshots": [
+            {
+              "accessibilityText": "FloatingView 设置界面",
+              "url": "https://mikehuang01.github.io/my-apt-repo/FloatingView-Screenshot.jpg"
+            }
+          ]
+        },
+        { "class": "DepictionHeaderView", "title": "功能说明" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**FloatingView RootHide**  \n保留基础浮窗功能，删除原有的三屏和 ARC 功能。\n\n- 仅保留基本的浮窗功能\n- 删除原有的三屏功能\n- 删除原有的 ARC 功能\n- 适用环境：RootHide / `iphoneos-arm64e`",
+          "useSpacing": true
+        },
+        { "class": "DepictionHeaderView", "title": "信息" },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionTableTextView", "title": "版本", "text": "1.6.0-6+sidebar19" },
+        { "class": "DepictionTableTextView", "title": "包名", "text": "com.be-huge.floating-view" },
+        { "class": "DepictionTableTextView", "title": "架构", "text": "iphoneos-arm64e" },
+        { "class": "DepictionTableTextView", "title": "作者", "text": "MikeHuang01二改" }
+      ]
+    }
+  ]
+}

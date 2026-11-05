@@ -8,7 +8,7 @@
 
 `https://mikehuang01.github.io/my-apt-repo/`
 
-如果无法连接，请确认地址末尾包含 `/`，并在 Sileo 中刷新软件源。
+如果无法连接，请确认地址末尾包含 `/`，并在 Sileo 中刷新软件源。源图标与 NoAds 使用同一图标。
 
 ## 软件分类
 
@@ -28,13 +28,14 @@
 | 应用程序 | Widgy | 1.0.0 | iOS |
 | 插件 | WatchFix | 2.0.4 | RootHide arm64e |
 | Tweak | StepOfLife | 1.0.0 | iOS |
-| roothide packages | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-1 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.1 | RootHide arm64e |
 
 ### NoAds
 
-RootHide 去广告插件，包含应用去广告、功能扩展与独立开关，二改自 NoAdsX。按总开关和应用开关加载模块。
+RootHide 去广告插件，包含应用去广告、功能扩展与独立开关，二改自 NoadsX。按总开关和应用开关加载模块。
 
 - 包名：`com.mikehuang01.noads`
 - 适用环境：RootHide，`iphoneos-arm64e`
@@ -42,6 +43,15 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 - 支持抖音 DYYY、小红薯、Lead 等插件。
 - 在“设置 → NoAds”中选择需要处理的应用；支持禁用摇一摇与开屏跳广等独立功能。
 - 安装或更新后注销一次，再打开设置确认开关状态。
+
+### FloatingView
+
+保留基本的浮窗功能，删除原有的三屏和 ARC 功能。
+
+- 包名：`com.be-huge.floating-view`
+- 适用环境：RootHide，`iphoneos-arm64e`
+- 安装后从“设置 → floating-view”启用浮窗并调整浮窗参数。
+- 设置界面支持其他杂项功能，以及配置备份、导出、导入和恢复。
 
 ### Hello 3Q
 
@@ -53,9 +63,19 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 - 安装后注销一次，配置文件会自动生成：`/var/mobile/Library/Preferences/Hello3Q-allowlist.conf`
 - RootHide 实际路径可用 Filza 搜索 `Hello3Q-allowlist.conf`。将要放行的 App Bundle ID 逐行加入白名单；不在白名单的应用继续拦截。
 
+### ActionBar Reborn
+
+在键盘底部显示撤销、选择、粘贴等按钮。
+
+- 包名：`netskao.actionbarreborns`
+- 适用环境：RootHide，`iphoneos-arm64e`
+- 版本：`1.1-2+mikehuang01.1`
+- 修改内容：调整首次聚焦时的按钮初始化条件。
+- 安装或更新后注销一次，再打开键盘测试按钮是否正常显示。
+
 ## 目录结构
 
-每个软件包会按兼容环境与用途归类；GitHub Actions 自动生成 APT 索引，Sileo 会从索引中读取包名、版本、架构和图标信息。
+每个软件包会按兼容环境与用途归类；GitHub Actions 自动生成 APT 索引，Sileo 会从索引中读取包名、版本、架构和图标信息。详情页会展示软件介绍、截图与兼容信息。
 
 ## 说明
 

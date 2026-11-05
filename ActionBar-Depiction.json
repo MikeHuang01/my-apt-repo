@@ -1,0 +1,25 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        { "class": "DepictionHeaderView", "title": "功能说明" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**ActionBar Reborn 修改版**  \n在键盘底部显示撤销、选择、粘贴等按钮。\n\n- 调整首次聚焦时的按钮初始化条件\n- 兼容 RootHide / `iphoneos-arm64e`\n- 依赖：`mobilesubstrate`、`firmware (>= 15.0)`",
+          "useSpacing": true
+        },
+        { "class": "DepictionHeaderView", "title": "信息" },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionTableTextView", "title": "版本", "text": "1.1-2+mikehuang01.1" },
+        { "class": "DepictionTableTextView", "title": "包名", "text": "netskao.actionbarreborns" },
+        { "class": "DepictionTableTextView", "title": "架构", "text": "iphoneos-arm64e" },
+        { "class": "DepictionTableTextView", "title": "作者", "text": "Netskao, MikeHuang01二改" }
+      ]
+    }
+  ]
+}
