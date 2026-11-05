@@ -34,11 +34,12 @@
 
 ### NoAds
 
-RootHide 测试版去广告插件，包含应用去广告、功能扩展与独立开关。按总开关和应用开关加载模块，不按应用版本限制。
+RootHide 去广告插件，包含应用去广告、功能扩展与独立开关，二改自 NoAdsX。按总开关和应用开关加载模块。
 
 - 包名：`com.mikehuang01.noads`
 - 适用环境：RootHide，`iphoneos-arm64e`
 - 依赖：`mobilesubstrate`、`preferenceloader`、`rootless-compat (>= 0.9)`
+- 支持抖音 DYYY、小红薯、Lead 等插件。
 - 在“设置 → NoAds”中选择需要处理的应用；支持禁用摇一摇与开屏跳广等独立功能。
 - 安装或更新后注销一次，再打开设置确认开关状态。
 

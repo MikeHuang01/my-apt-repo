@@ -30,7 +30,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**NoAds RootHide 测试版**  \n包含应用去广告、功能扩展及独立开关。按总开关和应用开关加载模块，不按应用版本限制。\n\n- 可在设置中为单个应用启用或停用\n- 支持禁用摇一摇与开屏跳广\n- 支持导入配置\n- 适用环境：RootHide / `iphoneos-arm64e`",
+          "markdown": "**NoAds RootHide**  \n包含应用去广告、功能扩展及独立开关。按总开关和应用开关加载模块。\n\n- 二改自 NoAdsX\n- 支持抖音 DYYY、小红薯、Lead 等插件\n- 可在设置中为单个应用启用或停用\n- 支持禁用摇一摇与开屏跳广\n- 支持导入配置\n- 适用环境：RootHide / `iphoneos-arm64e`",
           "useSpacing": true
         },
         {
