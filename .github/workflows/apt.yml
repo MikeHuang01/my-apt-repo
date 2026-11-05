@@ -27,9 +27,11 @@ jobs:
           sudo apt-get install -y apt-utils
           mkdir -p site
           find . -type f -name '*.deb' -not -path './site/*' -exec cp {} site/ \;
-          for icon in 'CydiaIcon.png' 'NoAds.png' '微信图片_2026-11-01_055300_739.jpg' '4a46117aea0e822d3f65b625030a959f.jpg'; do
-            if [ -f "$icon" ]; then cp "$icon" site/CydiaIcon.png; break; fi
-          done
+          if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/CydiaIcon.png; fi
+          if [ ! -f 'site/CydiaIcon.png' ]; then for icon in 'CydiaIcon.png' '微信图片_2026-11-01_055300_739.jpg' '4a46117aea0e822d3f65b625030a959f.jpg'; do
+              if [ -f "$icon" ]; then cp "$icon" site/CydiaIcon.png; break; fi
+            done
+          fi
           if [ -f 'NoAds-Depiction.json' ]; then cp 'NoAds-Depiction.json' site/NoAds-Depiction.json; fi
           for image in 'NoAds-Screenshot-1.jpg' 'NoAds-Screenshot-2.jpg'; do
             if [ -f "$image" ]; then cp "$image" site/; fi
@@ -37,8 +39,24 @@ jobs:
           cd site
           apt-ftparchive packages . > Packages
           if [ -f 'NoAds-Depiction.json' ]; then
-            awk 'BEGIN { RS=""; ORS="\n\n" } $0 ~ /^Package: com[.]mikehuang01[.]noads$/ { print $0; print "SileoDepiction: https://mikehuang01.github.io/my-apt-repo/NoAds-Depiction.json"; next } { print $0 }' Packages > Packages.with-depiction
-            mv Packages.with-depiction Packages
+            python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("Packages")
+          entries = path.read_text(encoding="utf-8").split("\n\n")
+          output = []
+          for entry in entries:
+              lines = entry.splitlines()
+              if lines and lines[0] == "Package: com.mikehuang01.noads":
+                  lines = [
+                      "Icon: https://mikehuang01.github.io/my-apt-repo/NoAds.png"
+                      if line.startswith("Icon:") else line
+                      for line in lines
+                  ]
+                  lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/NoAds-Depiction.json")
+              output.append("\n".join(lines))
+          path.write_text("\n\n".join(output).rstrip() + "\n", encoding="utf-8")
+          PY
           fi
           gzip -kf Packages
           apt-ftparchive \
