@@ -56,13 +56,14 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 
 ### Hello 3Q
 
-拦截 App 后台预热（省内存、少杀后台），支持按 Bundle ID 放行指定应用。
+拦截后台热加载 App（节约内存、少杀后台），按 Bundle ID 放行指定应用。
 
 - 包名：`cn.zqbb.stopautolaunchapps`
 - 适用环境：RootHide，`iphoneos-arm64e`
 - 依赖：`mobilesubstrate (>= 0.9.5000)`、`firmware (>= 16.0)`
-- 安装后注销一次，配置文件会自动生成：`/var/mobile/Library/Preferences/Hello3Q-allowlist.conf`
-- RootHide 实际路径可用 Filza 搜索 `Hello3Q-allowlist.conf`。将要放行的 App Bundle ID 逐行加入白名单；不在白名单的应用继续拦截。
+- 配置文件：`/var/containers/Bundle/Application/jbroot-*/var/mobile/Library/Preferences/Hello3Q-allowlist.conf`
+- 每次修改后注销一次，文件会自动生成；把要放行的 App 包名往下加就行，一行一个。不在白名单的应用继续拦截。
+- 用法、示例和运行状态都写在配置文件里。
 
 ### ActionBar Reborn
 

@@ -1,0 +1,62 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 12,
+          "itemSize": "{160, 347}",
+          "screenshots": [
+            {
+              "accessibilityText": "Hello 3Q 详情界面",
+              "url": "https://mikehuang01.github.io/my-apt-repo/Hello3Q-Screenshot.jpg"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "功能说明"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Hello 3Q RootHide**  \n拦截后台热加载 App（节约内存、少杀后台），按 Bundle ID 放行指定应用。\n\n- 配置文件：`/var/containers/Bundle/Application/jbroot-*/var/mobile/Library/Preferences/Hello3Q-allowlist.conf`\n- 每次修改后注销一次，文件会自动生成；把要放行的 App 包名往下加就行，一行一个。\n- 不在白名单的应用继续拦截。\n- 用法、示例和运行状态都写在配置文件里。",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "信息"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "版本",
+          "text": "2.5+mike.13"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "包名",
+          "text": "cn.zqbb.stopautolaunchapps"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "架构",
+          "text": "iphoneos-arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "作者",
+          "text": "zqbb / MikeHuang01二改"
+        }
+      ]
+    }
+  ]
+}
