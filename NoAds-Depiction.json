@@ -1,0 +1,66 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 12,
+          "itemSize": "{160, 347}",
+          "screenshots": [
+            {
+              "accessibilityText": "NoAds 主设置界面",
+              "url": "https://mikehuang01.github.io/my-apt-repo/NoAds-Screenshot-1.jpg"
+            },
+            {
+              "accessibilityText": "NoAds 开屏跳广设置界面",
+              "url": "https://mikehuang01.github.io/my-apt-repo/NoAds-Screenshot-2.jpg"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "功能说明"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**NoAds RootHide 测试版**  \n包含应用去广告、功能扩展及独立开关。按总开关和应用开关加载模块，不按应用版本限制。\n\n- 可在设置中为单个应用启用或停用\n- 支持禁用摇一摇与开屏跳广\n- 支持导入配置\n- 适用环境：RootHide / `iphoneos-arm64e`",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "信息"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "版本",
+          "text": "1.3.5-3-1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "包名",
+          "text": "com.mikehuang01.noads"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "架构",
+          "text": "iphoneos-arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "作者",
+          "text": "半生年华, Mikehuang01"
+        }
+      ]
+    }
+  ]
+}
