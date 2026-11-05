@@ -36,7 +36,8 @@ jobs:
           if [ -f "NoAds-Depiction.json" ]; then cp "NoAds-Depiction.json" site/NoAds-Depiction.json; fi
           if [ -f "FloatingView-Depiction.json" ]; then cp "FloatingView-Depiction.json" site/FloatingView-Depiction.json; fi
           if [ -f "ActionBar-Depiction.json" ]; then cp "ActionBar-Depiction.json" site/ActionBar-Depiction.json; fi
-          for image in "NoAds-Screenshot-1.jpg" "NoAds-Screenshot-2.jpg" "FloatingView-Screenshot.jpg"; do
+          if [ -f "Hello3Q-Depiction.json" ]; then cp "Hello3Q-Depiction.json" site/Hello3Q-Depiction.json; fi
+          for image in "NoAds-Screenshot-1.jpg" "NoAds-Screenshot-2.jpg" "FloatingView-Screenshot.jpg" "Hello3Q-Screenshot.jpg"; do
             if [ -f "$image" ]; then cp "$image" site/; fi
           done
           cd site
@@ -57,6 +58,8 @@ jobs:
                   lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/FloatingView-Depiction.json")
               if lines[0] == "Package: netskao.actionbarreborns":
                   lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/ActionBar-Depiction.json")
+              if lines[0] == "Package: cn.zqbb.stopautolaunchapps":
+                  lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/Hello3Q-Depiction.json")
               output.append(chr(10).join(lines))
           path.write_text((chr(10)+chr(10)).join(output) + chr(10), encoding="utf-8")
           PY
