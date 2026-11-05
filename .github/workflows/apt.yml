@@ -30,11 +30,11 @@ jobs:
           mkdir -p site
           find . -type f -name '*.deb' -not -path './site/*' -exec cp {} site/ \;
 
-          # The old beta build has an unsupported PAX tar header and is replaced by mikehuang01.2.
+          # Replace both earlier ActionBar builds, including the invalid PAX archive.
           rm -f site/ActionBar-Reborn-1.1-2-MikeHuang01-beta-roothide-arm64e.deb
           rm -f site/ActionBar-Reborn-1.1-2-MikeHuang01.1-roothide-arm64e.deb
 
-          # Validate every DEB before it reaches Sileo.
+          # Reject malformed archives before publishing the source.
           for deb in site/*.deb; do
             dpkg-deb --info "$deb" >/dev/null
             dpkg-deb --contents "$deb" >/dev/null
@@ -47,40 +47,16 @@ jobs:
               if [ -f "$icon" ]; then cp "$icon" site/CydiaIcon.png; break; fi
             done
           fi
+
           for asset in 'NoAds-Depiction.json' 'FloatingView-Depiction.json' 'ActionBar-Depiction.json' 'Hello3Q-Depiction.json' 'NoAds-Screenshot-1.jpg' 'NoAds-Screenshot-2.jpg' 'FloatingView-Screenshot.jpg' 'Hello3Q-Screenshot.jpg'; do
             if [ -f "$asset" ]; then cp "$asset" site/; fi
           done
 
           cd site
           apt-ftparchive packages . > Packages
-          python3 - <<'PY'
-from pathlib import Path
-
-path = Path("Packages")
-entries = path.read_text(encoding="utf-8").split("\n\n")
-output = []
-for entry in entries:
-    lines = entry.splitlines()
-    if not lines:
-        continue
-    if lines[0] == "Package: com.mikehuang01.noads":
-        lines = [
-            "Icon: https://mikehuang01.github.io/my-apt-repo/NoAds.png"
-            if line.startswith("Icon:") else line
-            for line in lines
-        ]
-        lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/NoAds-Depiction.json")
-    if lines[0] == "Package: com.be-huge.floating-view":
-        lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/FloatingView-Depiction.json")
-    if lines[0] == "Package: netskao.actionbarreborns":
-        lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/ActionBar-Depiction.json")
-    if lines[0] == "Package: cn.zqbb.stopautolaunchapps":
-        lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/Hello3Q-Depiction.json")
-    output.append("\n".join(lines))
-path.write_text("\n\n".join(output).rstrip() + "\n", encoding="utf-8")
-PY
-
+          python3 ../update_packages.py
           gzip -kf Packages
+
           apt-ftparchive \
             -o APT::FTPArchive::Release::Origin="MikeHuang01" \
             -o APT::FTPArchive::Release::Label="my-apt-repo" \
