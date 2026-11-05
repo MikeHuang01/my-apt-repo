@@ -32,7 +32,7 @@
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-1 | RootHide arm64e |
-| roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.1 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.2 | RootHide arm64e |
 
 ### NoAds
 
@@ -71,8 +71,9 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 
 - 包名：`netskao.actionbarreborns`
 - 适用环境：RootHide，`iphoneos-arm64e`
-- 版本：`1.1-2+mikehuang01.1`
-- 修改内容：调整首次聚焦时的按钮初始化条件。
+- 版本：`1.1-2+mikehuang01.2`
+- 修改内容：调整首次聚焦时的按钮初始化条件，并修复安装包归档格式。
+- 如之前安装失败，请刷新源后安装 1.1-2+mikehuang01.2，无需先卸载。
 - 安装或更新后注销一次，再打开键盘测试按钮是否正常显示。
 
 ## 目录结构
