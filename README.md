@@ -29,8 +29,18 @@
 | 插件 | WatchFix | 2.0.4 | RootHide arm64e |
 | Tweak | StepOfLife | 1.0.0 | iOS |
 | roothide packages | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
-| roothide packages / Tweak | ActionBar Reborn | 1.1-2+mikehuang01.1~beta | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-1 | RootHide arm64e |
+
+### NoAds
+
+RootHide 测试版去广告插件，包含应用去广告、功能扩展与独立开关。按总开关和应用开关加载模块，不按应用版本限制。
+
+- 包名：`com.mikehuang01.noads`
+- 适用环境：RootHide，`iphoneos-arm64e`
+- 依赖：`mobilesubstrate`、`preferenceloader`、`rootless-compat (>= 0.9)`
+- 在“设置 → NoAds”中选择需要处理的应用；支持禁用摇一摇与开屏跳广等独立功能。
+- 安装或更新后注销一次，再打开设置确认开关状态。
 
 ### Hello 3Q
 
