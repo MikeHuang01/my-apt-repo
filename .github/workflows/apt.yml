@@ -40,10 +40,11 @@ jobs:
             dpkg-deb --contents "$deb" >/dev/null
           done
 
+          # Repository icon: the GitHub avatar. Package icons are kept separate.
           if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/CydiaIcon.png; fi
-          if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/NoAds.png; fi
           mkdir -p site/Icons
           if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/Icons/RepoIcon-20261106.png; fi
+          if [ -f 'NoAds-Plugin.png' ]; then cp 'NoAds-Plugin.png' site/; fi
           if [ ! -f 'site/CydiaIcon.png' ]; then
             for icon in 'CydiaIcon.png' '微信图片_2026-11-01_055300_739.jpg' '4a46117aea0e822d3f65b625030a959f.jpg'; do
               if [ -f "$icon" ]; then cp "$icon" site/CydiaIcon.png; break; fi
