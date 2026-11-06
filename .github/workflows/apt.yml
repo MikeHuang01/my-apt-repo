@@ -72,7 +72,29 @@ jobs:
           } > Release
           rm Release.tmp
           printf '架构: iphoneos-arm64e / iphoneos-arm64 / iphoneos-arm\n组件: .\n' > index.html
-
+          mkdir -p v2
+          cp site/*.deb v2/
+          find . -maxdepth 1 -type f -name '*.deb' -exec cp {} v2/ \;
+          cp *.jpg v2/ 2>/dev/null || true
+          cp *.json v2/ 2>/dev/null || true
+          cp CydiaIcon.png v2/CydiaIcon.png
+          cp RepoIcon.png v2/RepoIcon.png
+          cd v2
+          apt-ftparchive packages . > Packages
+          python3 ../../update_packages.py
+          gzip -kf Packages
+          apt-ftparchive \
+            -o APT::FTPArchive::Release::Origin="MikeHuang01-Cat" \
+            -o APT::FTPArchive::Release::Label="⭐ MikeHuang01" \
+            -o APT::FTPArchive::Release::Architectures="iphoneos-arm iphoneos-arm64 iphoneos-arm64e" \
+            -o APT::FTPArchive::Release::Components="." \
+            release . > Release.tmp
+          {
+            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/v2/RepoIcon.png\n'
+            cat Release.tmp
+          } > Release
+          rm Release.tmp
+          printf '架构: iphoneos-arm64e / iphoneos-arm64 / iphoneos-arm\n组件: .\n' > index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
