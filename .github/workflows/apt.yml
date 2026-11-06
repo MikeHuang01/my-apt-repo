@@ -25,7 +25,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y apt-utils dpkg-dev libarchive-tools imagemagick
+          sudo apt-get install -y --no-install-recommends apt-utils dpkg-dev libarchive-tools
 
           mkdir -p site
           find . -type f -name '*.deb' -not -path './site/*' -exec cp {} site/ \;
@@ -42,10 +42,12 @@ jobs:
 
           # Repository icon: the cat avatar. Decode and re-encode it as a real PNG
           # because Sileo may ignore files whose contents do not match the extension.
+          # This source file is already a verified PNG. Reuse it directly so the
+          # build needs no image conversion packages.
           mkdir -p site/Icons
-          convert 'NoAds.png' -auto-orient -resize 460x460 'site/Icons/RepoIcon-20261106-v3.png'
-          cp 'site/Icons/RepoIcon-20261106-v3.png' site/RepoIcon.png
-          cp 'site/Icons/RepoIcon-20261106-v3.png' site/CydiaIcon.png
+          cp '.github/icons/RepoIcon-cat-v4.png' 'site/Icons/RepoIcon-20261106-v4.png'
+          cp 'site/Icons/RepoIcon-20261106-v4.png' site/RepoIcon.png
+          cp 'site/Icons/RepoIcon-20261106-v4.png' site/CydiaIcon.png
           if [ -f 'NoAds-Plugin.png' ]; then cp 'NoAds-Plugin.png' site/; fi
 
           for asset in 'NoAds-Depiction.json' 'FloatingView-Depiction.json' 'ActionBar-Depiction.json' 'Hello3Q-Depiction.json' 'NoAds-Screenshot-1.jpg' 'NoAds-Screenshot-2.jpg' 'FloatingView-Screenshot.jpg' 'Hello3Q-Screenshot.jpg'; do
@@ -64,7 +66,7 @@ jobs:
             -o APT::FTPArchive::Release::Components="." \
             release . > Release.tmp
           {
-            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/Icons/RepoIcon-20261106-v3.png\n'
+            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/Icons/RepoIcon-20261106-v4.png\n'
             cat Release.tmp
           } > Release
           rm Release.tmp
@@ -74,8 +76,8 @@ jobs:
           cp ../*.jpg v2/ 2>/dev/null || true
           cp ../*.json v2/ 2>/dev/null || true
           mkdir -p v2/Icons
-          cp Icons/RepoIcon-20261106-v3.png v2/Icons/RepoIcon-20261106-v3.png
-          cp Icons/RepoIcon-20261106-v3.png v2/CydiaIcon.png
+          cp Icons/RepoIcon-20261106-v4.png v2/Icons/RepoIcon-20261106-v4.png
+          cp Icons/RepoIcon-20261106-v4.png v2/CydiaIcon.png
           cd v2
           apt-ftparchive packages . > Packages
           python3 ../../update_packages.py
@@ -87,7 +89,7 @@ jobs:
             -o APT::FTPArchive::Release::Components="." \
             release . > Release.tmp
           {
-            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/v2/Icons/RepoIcon-20261106-v3.png\n'
+            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/v2/Icons/RepoIcon-20261106-v4.png\n'
             cat Release.tmp
           } > Release
           rm Release.tmp
