@@ -25,7 +25,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y apt-utils dpkg-dev libarchive-tools
+          sudo apt-get install -y apt-utils dpkg-dev libarchive-tools imagemagick
 
           mkdir -p site
           find . -type f -name '*.deb' -not -path './site/*' -exec cp {} site/ \;
@@ -40,16 +40,13 @@ jobs:
             dpkg-deb --contents "$deb" >/dev/null
           done
 
-          # Repository icon: the GitHub avatar. Package icons are kept separate.
-          if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/CydiaIcon.png; fi
+          # Repository icon: the cat avatar. Decode and re-encode it as a real PNG
+          # because Sileo may ignore files whose contents do not match the extension.
           mkdir -p site/Icons
-          if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/Icons/RepoIcon-20261106.png; cp 'NoAds.png' site/RepoIcon.png; fi
+          convert 'NoAds.png' -auto-orient -resize 460x460 'site/Icons/RepoIcon-20261106-v3.png'
+          cp 'site/Icons/RepoIcon-20261106-v3.png' site/RepoIcon.png
+          cp 'site/Icons/RepoIcon-20261106-v3.png' site/CydiaIcon.png
           if [ -f 'NoAds-Plugin.png' ]; then cp 'NoAds-Plugin.png' site/; fi
-          if [ ! -f 'site/CydiaIcon.png' ]; then
-            for icon in 'CydiaIcon.png' '微信图片_2026-11-01_055300_739.jpg' '4a46117aea0e822d3f65b625030a959f.jpg'; do
-              if [ -f "$icon" ]; then cp "$icon" site/CydiaIcon.png; break; fi
-            done
-          fi
 
           for asset in 'NoAds-Depiction.json' 'FloatingView-Depiction.json' 'ActionBar-Depiction.json' 'Hello3Q-Depiction.json' 'NoAds-Screenshot-1.jpg' 'NoAds-Screenshot-2.jpg' 'FloatingView-Screenshot.jpg' 'Hello3Q-Screenshot.jpg'; do
             if [ -f "$asset" ]; then cp "$asset" site/; fi
@@ -67,7 +64,7 @@ jobs:
             -o APT::FTPArchive::Release::Components="." \
             release . > Release.tmp
           {
-            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/RepoIcon.png\n'
+            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/Icons/RepoIcon-20261106-v3.png\n'
             cat Release.tmp
           } > Release
           rm Release.tmp
@@ -76,8 +73,9 @@ jobs:
           cp *.deb v2/
           cp ../*.jpg v2/ 2>/dev/null || true
           cp ../*.json v2/ 2>/dev/null || true
-          cp CydiaIcon.png v2/CydiaIcon.png
-          cp RepoIcon.png v2/RepoIcon.png
+          mkdir -p v2/Icons
+          cp Icons/RepoIcon-20261106-v3.png v2/Icons/RepoIcon-20261106-v3.png
+          cp Icons/RepoIcon-20261106-v3.png v2/CydiaIcon.png
           cd v2
           apt-ftparchive packages . > Packages
           python3 ../../update_packages.py
@@ -89,7 +87,7 @@ jobs:
             -o APT::FTPArchive::Release::Components="." \
             release . > Release.tmp
           {
-            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/v2/RepoIcon.png\n'
+            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/v2/Icons/RepoIcon-20261106-v3.png\n'
             cat Release.tmp
           } > Release
           rm Release.tmp
@@ -111,3 +109,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+
