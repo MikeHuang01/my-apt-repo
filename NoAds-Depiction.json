@@ -35,18 +35,6 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "更新记录"
-        },
-        {
-          "class": "DepictionSeparatorView"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "**1.3.5-3-2**\n- 添加 StressWatch 解锁\n- 优化插件体积与资源占用\n- 保留原有功能说明与设置方式",
-          "useSpacing": true
-        },
-        {
-          "class": "DepictionHeaderView",
           "title": "信息"
         },
         {
@@ -71,6 +59,36 @@
           "class": "DepictionTableTextView",
           "title": "作者",
           "text": "半生年华, Mikehuang01"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "提示"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "安装或更新后请注销一次，再打开“设置 → NoAds”确认开关状态。",
+          "useSpacing": true
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "更新日志",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.3.5-3-2"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 添加 StressWatch 解锁\n- 优化插件体积与资源占用\n- 保留原有功能说明与设置方式",
+          "useSpacing": true
         }
       ]
     }
