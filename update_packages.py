@@ -9,7 +9,7 @@ for entry in entries:
         continue
     if lines[0] == "Package: com.mikehuang01.noads":
         lines = [
-            "Icon: https://mikehuang01.github.io/my-apt-repo/NoAds.png"
+            "Icon: https://mikehuang01.github.io/my-apt-repo/NoAds-Plugin.png"
             if line.startswith("Icon:") else line
             for line in lines
         ]
