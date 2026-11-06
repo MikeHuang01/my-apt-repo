@@ -59,7 +59,7 @@ jobs:
 
           apt-ftparchive \
             -o APT::FTPArchive::Release::Origin="MikeHuang01" \
-            -o APT::FTPArchive::Release::Label="my-apt-repo" \
+            -o APT::FTPArchive::Release::Label="⭐ MikeHuang01" \
             -o APT::FTPArchive::Release::Architectures="iphoneos-arm iphoneos-arm64 iphoneos-arm64e" \
             -o APT::FTPArchive::Release::Components="." \
             release . > Release
