@@ -73,10 +73,9 @@ jobs:
           rm Release.tmp
           printf '架构: iphoneos-arm64e / iphoneos-arm64 / iphoneos-arm\n组件: .\n' > index.html
           mkdir -p v2
-          cp site/*.deb v2/
-          find . -maxdepth 1 -type f -name '*.deb' -exec cp {} v2/ \;
-          cp *.jpg v2/ 2>/dev/null || true
-          cp *.json v2/ 2>/dev/null || true
+          cp *.deb v2/
+          cp ../*.jpg v2/ 2>/dev/null || true
+          cp ../*.json v2/ 2>/dev/null || true
           cp CydiaIcon.png v2/CydiaIcon.png
           cp RepoIcon.png v2/RepoIcon.png
           cd v2
