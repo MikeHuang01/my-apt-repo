@@ -2,13 +2,17 @@
 
 一个面向 iOS 越狱设备的 Sileo / APT 软件源，提供 RootHide、Rootless 与系统工具类软件包。
 
+源在 Sileo 中显示为 **⭐ MikeHuang01**，用星标前缀方便在已添加的软件源中快速找到。
+
 ## 添加软件源
 
 在 Sileo 中添加：
 
 `https://mikehuang01.github.io/my-apt-repo/`
 
-如果无法连接，请确认地址末尾包含 `/`，并在 Sileo 中刷新软件源。源图标与 NoAds 使用同一图标。
+如果无法连接，请确认地址末尾包含 `/`，并在 Sileo 中刷新软件源。源图标与 GitHub 账号头像保持一致。
+
+软件包的更新记录放在详情页的“更新日志”标签中，功能说明与安装提示保留在“详情”标签中。
 
 ## 软件分类
 
@@ -31,7 +35,7 @@
 | Tweak | StepOfLife | 1.0.0 | iOS |
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
-| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-1 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-2 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.2 | RootHide arm64e |
 
 ### NoAds
@@ -42,6 +46,7 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 - 适用环境：RootHide，`iphoneos-arm64e`
 - 依赖：`mobilesubstrate`、`preferenceloader`、`rootless-compat (>= 0.9)`
 - 支持抖音 DYYY、小红薯、Lead 等插件。
+- 已加入 StressWatch 解锁，并优化插件体积与资源占用。
 - 在“设置 → NoAds”中选择需要处理的应用；支持禁用摇一摇与开屏跳广等独立功能。
 - 安装或更新后注销一次，再打开设置确认开关状态。
 
