@@ -43,7 +43,7 @@ jobs:
           # Repository icon: the GitHub avatar. Package icons are kept separate.
           if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/CydiaIcon.png; fi
           mkdir -p site/Icons
-          if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/Icons/RepoIcon-20261106.png; fi
+          if [ -f 'NoAds.png' ]; then cp 'NoAds.png' site/Icons/RepoIcon-20261106.png; cp 'NoAds.png' site/RepoIcon.png; fi
           if [ -f 'NoAds-Plugin.png' ]; then cp 'NoAds-Plugin.png' site/; fi
           if [ ! -f 'site/CydiaIcon.png' ]; then
             for icon in 'CydiaIcon.png' '微信图片_2026-11-01_055300_739.jpg' '4a46117aea0e822d3f65b625030a959f.jpg'; do
@@ -67,7 +67,7 @@ jobs:
             -o APT::FTPArchive::Release::Components="." \
             release . > Release.tmp
           {
-            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/Icons/RepoIcon-20261106.png\n'
+            printf 'Icon: https://mikehuang01.github.io/my-apt-repo/RepoIcon.png\n'
             cat Release.tmp
           } > Release
           rm Release.tmp
