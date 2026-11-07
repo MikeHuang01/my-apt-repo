@@ -37,7 +37,7 @@
 | Tweak | StepOfLife | 1.0.0 | iOS |
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
-| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-2 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-3 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.2 | RootHide arm64e |
 
 ### NoAds
@@ -49,6 +49,7 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 - 依赖：`mobilesubstrate`、`preferenceloader`、`rootless-compat (>= 0.9)`
 - 支持抖音 DYYY、小红薯、Lead 等插件。
 - 已加入 StressWatch 解锁，并优化插件体积与资源占用。
+- 微信去广告之外新增更新拦截，减少微信自动更新打断插件。
 - 在“设置 → NoAds”中选择需要处理的应用；支持禁用摇一摇与开屏跳广等独立功能。
 - 安装或更新后注销一次，再打开设置确认开关状态。
 
