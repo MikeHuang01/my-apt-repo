@@ -30,7 +30,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**NoAds RootHide**  \n包含应用去广告、功能扩展及独立开关。按总开关和应用开关加载模块。\n\n- 二改自 NoAdsX\n- 支持抖音 DYYY、小红薯、Lead 等插件\n- 可在设置中为单个应用启用或停用\n- 支持禁用摇一摇与开屏跳广\n- 支持导入配置\n- 适用环境：RootHide / `iphoneos-arm64e`",
+          "markdown": "**NoAds RootHide**  \n包含应用去广告、功能扩展及独立开关。按总开关和应用开关加载模块。\n\n- 二改自 NoAdsX\n- 支持抖音 DYYY、小红薯、Lead 与 KAlert 等插件\n- 可在设置中为单个应用启用或停用\n- 支持禁用摇一摇与开屏跳广\n- 支持导入配置\n- 适用环境：RootHide / `iphoneos-arm64e`",
           "useSpacing": true
         },
         {
@@ -43,7 +43,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "版本",
-          "text": "1.3.5-3-3"
+          "text": "1.3.5-3-4"
         },
         {
           "class": "DepictionTableTextView",
@@ -78,6 +78,18 @@
       "class": "DepictionStackView",
       "tabname": "更新日志",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.3.5-3-4"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 添加微信禁用热更新\n- 添加 Swiftgram 会员功能\n- 合并 Swiftgram Lead / KAlert 规则，避免重复注入\n- 补全 StressWatch 会员功能提示",
+          "useSpacing": true
+        },
         {
           "class": "DepictionHeaderView",
           "title": "1.3.5-3-3"
