@@ -48,10 +48,10 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 - 适用环境：RootHide，`iphoneos-arm64e`
 - 依赖：`mobilesubstrate`、`preferenceloader`、`rootless-compat (>= 0.9)`
 - 支持抖音 DYYY、小红薯、Lead 与 KAlert 等插件。
-- Swiftgram 同时加载 Lead 与 KAlert，覆盖防撤回、编辑记录、隐藏故事及会员功能。
+- Swiftgram 同时加载 Lead 与 KAlert，覆盖防撤回、编辑记录、隐藏故事等扩展功能。
 - 已加入 StressWatch 会员解锁，并优化插件体积与资源占用。
 - 微信去广告之外新增更新拦截，减少微信自动更新打断插件。
-- 微信设置提示补充“禁用微信热更新”说明。
+- 修复微信禁用热更新相关闪退。
 - 在“设置 → NoAds”中选择需要处理的应用；支持禁用摇一摇与开屏跳广等独立功能。
 - 安装或更新后注销一次，再打开设置确认开关状态。
 

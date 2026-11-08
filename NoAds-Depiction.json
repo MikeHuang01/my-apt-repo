@@ -87,7 +87,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- 添加微信禁用热更新\n- 添加 Swiftgram 会员功能\n- 合并 Swiftgram Lead / KAlert 规则，避免重复注入\n- 补全 StressWatch 会员功能提示",
+          "markdown": "- 修复微信禁用热更新闪退",
           "useSpacing": true
         },
         {
