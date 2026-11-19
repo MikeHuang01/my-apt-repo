@@ -1,0 +1,38 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        { "class": "DepictionHeaderView", "title": "功能说明" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**WatchFix**  \n解决 Apple Watch 连接问题，兼容 RootHide / `iphoneos-arm64e`。\n\n- MikeHuang01 修复闪退问题\n- 依赖：`rootless-compat (>= 0.9)`、`mobilesubstrate`、`firmware (>= 15.0)`",
+          "useSpacing": true
+        },
+        { "class": "DepictionHeaderView", "title": "信息" },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionTableTextView", "title": "版本", "text": "2.1.1+local.ui1" },
+        { "class": "DepictionTableTextView", "title": "包名", "text": "com.mlgm.watchfix" },
+        { "class": "DepictionTableTextView", "title": "架构", "text": "iphoneos-arm64e" },
+        { "class": "DepictionTableTextView", "title": "维护者", "text": "MikeHuang01 修复版" }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "更新日志",
+      "views": [
+        { "class": "DepictionHeaderView", "title": "2.1.1+local.ui1" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- MikeHuang01 修复闪退问题",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}
