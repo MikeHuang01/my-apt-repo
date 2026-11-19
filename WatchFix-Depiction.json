@@ -4,32 +4,32 @@
   "tabs": [
     {
       "class": "DepictionStackView",
-      "tabname": "详情",
+      "tabname": "\u8be6\u60c5",
       "views": [
-        { "class": "DepictionHeaderView", "title": "功能说明" },
+        { "class": "DepictionHeaderView", "title": "\u529f\u80fd\u8bf4\u660e" },
         { "class": "DepictionSeparatorView" },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**WatchFix**  \n解决 Apple Watch 连接问题，兼容 RootHide / `iphoneos-arm64e`。\n\n- MikeHuang01 修复闪退问题\n- 依赖：`rootless-compat (>= 0.9)`、`mobilesubstrate`、`firmware (>= 15.0)`",
+          "markdown": "**WatchFix**  \n\u89e3\u51b3 Apple Watch \u8fde\u63a5\u95ee\u9898\uff0c\u517c\u5bb9 RootHide / `iphoneos-arm64e`\u3002\n\n- MikeHuang01 \u4fee\u590d\u95ea\u9000\u95ee\u9898\n- \u4f9d\u8d56\uff1a`rootless-compat (>= 0.9)`\u3001`mobilesubstrate`\u3001`firmware (>= 15.0)`",
           "useSpacing": true
         },
-        { "class": "DepictionHeaderView", "title": "信息" },
+        { "class": "DepictionHeaderView", "title": "\u4fe1\u606f" },
         { "class": "DepictionSeparatorView" },
-        { "class": "DepictionTableTextView", "title": "版本", "text": "2.1.1+local.ui1" },
-        { "class": "DepictionTableTextView", "title": "包名", "text": "com.mlgm.watchfix" },
-        { "class": "DepictionTableTextView", "title": "架构", "text": "iphoneos-arm64e" },
-        { "class": "DepictionTableTextView", "title": "维护者", "text": "MikeHuang01 修复版" }
+        { "class": "DepictionTableTextView", "title": "\u7248\u672c", "text": "2.1.1+local.ui1" },
+        { "class": "DepictionTableTextView", "title": "\u5305\u540d", "text": "com.mlgm.watchfix" },
+        { "class": "DepictionTableTextView", "title": "\u67b6\u6784", "text": "iphoneos-arm64e" },
+        { "class": "DepictionTableTextView", "title": "\u7ef4\u62a4\u8005", "text": "MikeHuang01 \u4fee\u590d\u7248" }
       ]
     },
     {
       "class": "DepictionStackView",
-      "tabname": "更新日志",
+      "tabname": "\u66f4\u65b0\u65e5\u5fd7",
       "views": [
         { "class": "DepictionHeaderView", "title": "2.1.1+local.ui1" },
         { "class": "DepictionSeparatorView" },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- MikeHuang01 修复闪退问题",
+          "markdown": "- MikeHuang01 \u4fee\u590d\u95ea\u9000\u95ee\u9898",
           "useSpacing": true
         }
       ]
