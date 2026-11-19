@@ -1,0 +1,38 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        { "class": "DepictionHeaderView", "title": "功能说明" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**iCleaner Pro**  \niOS 系统清理工具，整合自定义缓存与 Inbox 规则，兼容 RootHide / `iphoneos-arm64e`。\n\n- 修复伪装后自定义规则失效问题\n- 依赖：`rootless-compat (>= 0.9)`、`firmware (>= 15.0)`、`findutils`、`apt | apt7`",
+          "useSpacing": true
+        },
+        { "class": "DepictionHeaderView", "title": "信息" },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionTableTextView", "title": "版本", "text": "7.10.0+customrules.4.rh8.2" },
+        { "class": "DepictionTableTextView", "title": "包名", "text": "com.sini.icleanerpro" },
+        { "class": "DepictionTableTextView", "title": "架构", "text": "iphoneos-arm64e" },
+        { "class": "DepictionTableTextView", "title": "维护者", "text": "MikeHuang01 修复版" }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "更新日志",
+      "views": [
+        { "class": "DepictionHeaderView", "title": "7.10.0+customrules.4.rh8.2" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 修复伪装后自定义规则失效问题",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}
