@@ -33,12 +33,13 @@
 | --- | --- | --- | --- |
 | roothide packages / 工具 | Filza All-in-One | 4.0.1-4 | RootHide arm64e |
 | 应用程序 | Widgy | 1.0.0 | iOS |
-| 插件 | WatchFix | 2.0.4 | RootHide arm64e |
+| 插件 | WatchFix | 2.1.1+local.ui1 | RootHide arm64e |
 | Tweak | StepOfLife | 1.0.0 | iOS |
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-4 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.2 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | iCleaner Pro | 7.10.0+customrules.4.rh8.2 | RootHide arm64e |
 
 ### NoAds
 
@@ -54,6 +55,24 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 - 修复微信禁用热更新相关闪退。
 - 在“设置 → NoAds”中选择需要处理的应用；支持禁用摇一摇与开屏跳广等独立功能。
 - 安装或更新后注销一次，再打开设置确认开关状态。
+
+### WatchFix
+
+解决 Apple Watch 连接问题，适用于 RootHide / `iphoneos-arm64e`。
+
+- 包名：`com.mlgm.watchfix`
+- 版本：`2.1.1+local.ui1`
+- MikeHuang01 修复闪退问题。
+- 依赖：`rootless-compat (>= 0.9)`、`mobilesubstrate`、`firmware (>= 15.0)`
+
+### iCleaner Pro
+
+iOS 系统清理工具，整合自定义缓存与 Inbox 规则，适用于 RootHide / `iphoneos-arm64e`。
+
+- 包名：`com.sini.icleanerpro`
+- 版本：`7.10.0+customrules.4.rh8.2`
+- 修复伪装后自定义规则失效问题。
+- 依赖：`rootless-compat (>= 0.9)`、`firmware (>= 15.0)`、`findutils`、`apt | apt7`
 
 ### FloatingView
 
