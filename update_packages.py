@@ -20,5 +20,9 @@ for entry in entries:
         lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/ActionBar-Depiction.json")
     if lines[0] == "Package: cn.zqbb.stopautolaunchapps":
         lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/Hello3Q-Depiction.json")
+    if lines[0] == "Package: com.mlgm.watchfix":
+        lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/WatchFix-Depiction.json")
+    if lines[0] == "Package: com.sini.icleanerpro":
+        lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/iCleaner-Pro-Depiction.json")
     output.append("\n".join(lines))
 path.write_text("\n\n".join(output).rstrip() + "\n", encoding="utf-8")
