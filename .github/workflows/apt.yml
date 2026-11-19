@@ -50,7 +50,7 @@ jobs:
           cp 'site/Icons/RepoIcon-20261106-v4.png' site/CydiaIcon.png
           if [ -f 'NoAds-Plugin.png' ]; then cp 'NoAds-Plugin.png' site/; fi
 
-          for asset in 'NoAds-Depiction.json' 'FloatingView-Depiction.json' 'ActionBar-Depiction.json' 'Hello3Q-Depiction.json' 'NoAds-Screenshot-1.jpg' 'NoAds-Screenshot-2.jpg' 'FloatingView-Screenshot.jpg' 'Hello3Q-Screenshot.jpg'; do
+          for asset in 'NoAds-Depiction.json' 'FloatingView-Depiction.json' 'ActionBar-Depiction.json' 'Hello3Q-Depiction.json' 'WatchFix-Depiction.json' 'iCleaner-Pro-Depiction.json' 'NoAds-Screenshot-1.jpg' 'NoAds-Screenshot-2.jpg' 'FloatingView-Screenshot.jpg' 'Hello3Q-Screenshot.jpg'; do
             if [ -f "$asset" ]; then cp "$asset" site/; fi
           done
 
