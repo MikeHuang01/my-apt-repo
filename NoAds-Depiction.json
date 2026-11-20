@@ -4,7 +4,7 @@
   "tabs": [
     {
       "class": "DepictionStackView",
-      "tabname": "详情",
+      "tabname": "\u8be6\u60c5",
       "views": [
         {
           "class": "DepictionScreenshotsView",
@@ -12,72 +12,84 @@
           "itemSize": "{160, 347}",
           "screenshots": [
             {
-              "accessibilityText": "NoAds 主设置界面",
+              "accessibilityText": "NoAds \u4e3b\u8bbe\u7f6e\u754c\u9762",
               "url": "https://mikehuang01.github.io/my-apt-repo/NoAds-Screenshot-1.jpg"
             },
             {
-              "accessibilityText": "NoAds 开屏跳广设置界面",
+              "accessibilityText": "NoAds \u5f00\u5c4f\u8df3\u5e7f\u8bbe\u7f6e\u754c\u9762",
               "url": "https://mikehuang01.github.io/my-apt-repo/NoAds-Screenshot-2.jpg"
             }
           ]
         },
         {
           "class": "DepictionHeaderView",
-          "title": "功能说明"
+          "title": "\u529f\u80fd\u8bf4\u660e"
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**NoAds RootHide**  \n包含应用去广告、功能扩展及独立开关。按总开关和应用开关加载模块。\n\n- 二改自 NoAdsX\n- 支持抖音 DYYY、小红薯、Lead 与 KAlert 等插件\n- 可在设置中为单个应用启用或停用\n- 支持禁用摇一摇与开屏跳广\n- 支持导入配置\n- 适用环境：RootHide / `iphoneos-arm64e`",
+          "markdown": "**NoAds RootHide**  \n\u5305\u542b\u5e94\u7528\u53bb\u5e7f\u544a\u3001\u529f\u80fd\u6269\u5c55\u53ca\u72ec\u7acb\u5f00\u5173\u3002\u6309\u603b\u5f00\u5173\u548c\u5e94\u7528\u5f00\u5173\u52a0\u8f7d\u6a21\u5757\u3002\n\n- \u4e8c\u6539\u81ea NoAdsX\n- \u652f\u6301\u6296\u97f3 DYYY \u7cbe\u7b80\u7248\u3001\u5c0f\u7ea2\u85af\u3001Lead \u4e0e KAlert \u7b49\u63d2\u4ef6\n- \u53ef\u5728\u8bbe\u7f6e\u4e2d\u4e3a\u5355\u4e2a\u5e94\u7528\u542f\u7528\u6216\u505c\u7528\n- \u652f\u6301\u7981\u7528\u6447\u4e00\u6447\u4e0e\u5f00\u5c4f\u8df3\u5e7f\n- \u652f\u6301\u5bfc\u5165\u914d\u7f6e\n- \u9002\u7528\u73af\u5883\uff1aRootHide / `iphoneos-arm64e`",
           "useSpacing": true
         },
         {
           "class": "DepictionHeaderView",
-          "title": "信息"
+          "title": "\u4fe1\u606f"
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "版本",
-          "text": "1.3.5-3-4"
+          "title": "\u7248\u672c",
+          "text": "1.3.5-3-5"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "包名",
+          "title": "\u5305\u540d",
           "text": "com.mikehuang01.noads"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "架构",
+          "title": "\u67b6\u6784",
           "text": "iphoneos-arm64e"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "作者",
-          "text": "半生年华, Mikehuang01"
+          "title": "\u4f5c\u8005",
+          "text": "\u534a\u751f\u5e74\u534e, Mikehuang01"
         },
         {
           "class": "DepictionHeaderView",
-          "title": "提示"
+          "title": "\u63d0\u793a"
         },
         {
           "class": "DepictionSeparatorView"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "安装或更新后请注销一次，再打开“设置 → NoAds”确认开关状态。",
+          "markdown": "\u5b89\u88c5\u6216\u66f4\u65b0\u540e\u8bf7\u6ce8\u9500\u4e00\u6b21\uff0c\u518d\u6253\u5f00\u201c\u8bbe\u7f6e \u2192 NoAds\u201d\u786e\u8ba4\u5f00\u5173\u72b6\u6001\u3002",
           "useSpacing": true
         }
       ]
     },
     {
       "class": "DepictionStackView",
-      "tabname": "更新日志",
+      "tabname": "\u66f4\u65b0\u65e5\u5fd7",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.3.5-3-5"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- \u6296\u97f3\u6a21\u5757\u5b8c\u6574\u66ff\u6362\u4e3a DYYY \u7cbe\u7b80\u7248 2.3-0.roothide\n- \u5305\u542b\u53bb\u5e7f\u544a\u3001\u64ad\u653e\u500d\u901f\u3001\u754c\u9762\u9690\u85cf\u3001\u957f\u6309\u4fdd\u5b58\u89c6\u9891/\u56fe\u7247/\u5c01\u9762/\u97f3\u9891\u53ca\u590d\u5236\u6587\u6848\u529f\u80fd\n- \u4f7f\u7528 DYYY \u5185\u7f6e\u8bbe\u7f6e\uff0c\u6309\u65b0\u5305\u914d\u7f6e\u652f\u6301\u6296\u97f3\u6807\u51c6\u7248\u4e0e\u6781\u901f\u7248\n- \u540c\u6b65\u66f4\u65b0 NoAds \u5185\u7684\u6296\u97f3\u63d2\u4ef6\u7248\u672c\u4e0e\u529f\u80fd\u8bf4\u660e",
+          "useSpacing": true
+        },
         {
           "class": "DepictionHeaderView",
           "title": "1.3.5-3-4"
@@ -87,7 +99,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- 修复微信禁用热更新闪退",
+          "markdown": "- \u4fee\u590d\u5fae\u4fe1\u7981\u7528\u70ed\u66f4\u65b0\u95ea\u9000",
           "useSpacing": true
         },
         {
@@ -99,7 +111,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- 微信新增更新拦截模块（NoAdsModuleWeChatUpdate）\n- 更新微信去广告拦截规则\n- 优化插件体积与资源占用",
+          "markdown": "- \u5fae\u4fe1\u65b0\u589e\u66f4\u65b0\u62e6\u622a\u6a21\u5757\uff08NoAdsModuleWeChatUpdate\uff09\n- \u66f4\u65b0\u5fae\u4fe1\u53bb\u5e7f\u544a\u62e6\u622a\u89c4\u5219\n- \u4f18\u5316\u63d2\u4ef6\u4f53\u79ef\u4e0e\u8d44\u6e90\u5360\u7528",
           "useSpacing": true
         },
         {
@@ -111,7 +123,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- 添加 StressWatch 解锁\n- 优化插件体积与资源占用\n- 保留原有功能说明与设置方式",
+          "markdown": "- \u6dfb\u52a0 StressWatch \u89e3\u9501\n- \u4f18\u5316\u63d2\u4ef6\u4f53\u79ef\u4e0e\u8d44\u6e90\u5360\u7528\n- \u4fdd\u7559\u539f\u6709\u529f\u80fd\u8bf4\u660e\u4e0e\u8bbe\u7f6e\u65b9\u5f0f",
           "useSpacing": true
         }
       ]

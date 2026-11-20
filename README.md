@@ -37,7 +37,7 @@
 | Tweak | StepOfLife | 1.0.0 | iOS |
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
-| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-4 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-5 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.2 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | iCleaner Pro | 7.10.0+customrules.4.rh8.2 | RootHide arm64e |
 
@@ -47,8 +47,9 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 
 - 包名：`com.mikehuang01.noads`
 - 适用环境：RootHide，`iphoneos-arm64e`
-- 依赖：`mobilesubstrate`、`preferenceloader`、`rootless-compat (>= 0.9)`
-- 支持抖音 DYYY、小红薯、Lead 与 KAlert 等插件。
+- 依赖：`mobilesubstrate`、`preferenceloader`、`firmware (>= 14.0)`、`rootless-compat (>= 0.9)`
+- 支持抖音 DYYY 精简版、小红薯、Lead 与 KAlert 等插件。
+- NoAds 1.3.5-3-5：抖音模块完整替换为 DYYY 精简版 2.3-0.roothide，支持抖音标准版与极速版，包含去广告、播放倍速、界面隐藏、长按保存与复制文案等功能，使用 DYYY 内置设置。
 - Swiftgram 同时加载 Lead 与 KAlert，覆盖防撤回、编辑记录、隐藏故事等扩展功能。
 - 已加入 StressWatch 会员解锁，并优化插件体积与资源占用。
 - 微信去广告之外新增更新拦截，减少微信自动更新打断插件。
