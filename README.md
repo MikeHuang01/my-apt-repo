@@ -32,9 +32,7 @@
 | 分类 | 软件包 | 版本 | 适用环境 |
 | --- | --- | --- | --- |
 | roothide packages / 工具 | Filza All-in-One | 4.0.1-4 | RootHide arm64e |
-| 应用程序 | Widgy | 1.0.0 | iOS |
 | 插件 | WatchFix | 2.1.1+local.ui1 | RootHide arm64e |
-| Tweak | StepOfLife | 1.0.0 | iOS |
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-5 | RootHide arm64e |
