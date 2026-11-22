@@ -74,10 +74,9 @@ iOS 系统清理工具，整合自定义缓存与 Inbox 规则，适用于 RootH
 
 - 包名：`com.sini.icleanerpro`
 - 版本：`7.10.05`
-- 二改作者：MikeHuang01。此版本更新至提供的 customrules RH8.3 构建。
+- 二改作者：MikeHuang01。此版本更新至提供的 customrules RH8.4 构建。
 - 修复伪装后自定义规则失效问题。
 - 依赖：`rootless-compat (>= 0.9)`、`firmware (>= 15.0)`、`findutils`、`apt | apt7`
-
 ### FloatingView
 
 保留基本的浮窗功能，删除原有的三屏和 ARC 功能。

@@ -65,6 +65,18 @@
         },
         {
           "class": "DepictionMarkdownView",
+          "markdown": "- 更新至提供的 customrules RH8.4 构建。\n- 二改作者：MikeHuang01。",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "7.10.05（RH8.3 原包）"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
           "markdown": "- 更新至提供的 customrules RH8.3 构建。\n- 二改作者：MikeHuang01。",
           "useSpacing": true
         },
