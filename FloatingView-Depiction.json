@@ -17,19 +17,63 @@
             }
           ]
         },
-        { "class": "DepictionHeaderView", "title": "功能说明" },
-        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionHeaderView",
+          "title": "功能说明"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
         {
           "class": "DepictionMarkdownView",
           "markdown": "**FloatingView RootHide**  \n保留基础浮窗功能，删除原有的三屏和 ARC 功能。\n\n- 仅保留基本的浮窗功能\n- 删除原有的三屏功能\n- 删除原有的 ARC 功能\n- 适用环境：RootHide / `iphoneos-arm64e`",
           "useSpacing": true
         },
-        { "class": "DepictionHeaderView", "title": "信息" },
-        { "class": "DepictionSeparatorView" },
-        { "class": "DepictionTableTextView", "title": "版本", "text": "1.6.0-6+sidebar19" },
-        { "class": "DepictionTableTextView", "title": "包名", "text": "com.be-huge.floating-view" },
-        { "class": "DepictionTableTextView", "title": "架构", "text": "iphoneos-arm64e" },
-        { "class": "DepictionTableTextView", "title": "作者", "text": "MikeHuang01二改" }
+        {
+          "class": "DepictionHeaderView",
+          "title": "信息"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "版本",
+          "text": "1.6.0-6.5"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "包名",
+          "text": "com.be-huge.floating-view"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "架构",
+          "text": "iphoneos-arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "作者",
+          "text": "MikeHuang01二改"
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "更新日志",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.6.0-6.5"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 修复侧边栏手势取消后错误提交布局的问题。\n- 跳过不再使用的 HID 回调资源创建与清理，避免遗留资源操作。",
+          "useSpacing": true
+        }
       ]
     }
   ]
