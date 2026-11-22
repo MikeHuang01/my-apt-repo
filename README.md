@@ -35,7 +35,7 @@
 | 插件 | WatchFix | 2.1.1+local.ui1 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6+sidebar19 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
-| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-5 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-6 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2+mikehuang01.2 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | iCleaner Pro | 7.10.0+customrules.4.rh8.2 | RootHide arm64e |
 
@@ -45,8 +45,13 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 
 - 包名：`com.mikehuang01.noads`
 - 适用环境：RootHide，`iphoneos-arm64e`
-- 依赖：`mobilesubstrate`、`preferenceloader`、`firmware (>= 14.0)`、`rootless-compat (>= 0.9)`
+- 依赖：`mobilesubstrate`、`preferenceloader`、`firmware (>= 15.0)`、`rootless-compat (>= 0.9)`
 - 支持抖音 DYYY 精简版、小红薯、Lead 与 KAlert 等插件。
+- NoAds 1.3.5-3-6
+  - 酷安接入酷安净化 1.0，保留 NoAds 的信息流、插屏及其他去广告规则，移除重复的 7 个广告钩子。
+  - 更新 Swiftgram 的 Lead，继续配合 KAlert 使用。
+  - 内置全局键盘 ActionBar Reborn `1.1-2+mikehuang01.2+lifefix1+perf1+final1`，提供撤销、选择和粘贴等工具。键盘模块随 UIKit 加载，独立于 NoAds 总开关和应用开关。
+  - 最低要求为 iOS 15.0。已安装独立版 ActionBar Reborn 或酷安净化时，请通过 Sileo 的冲突提示切换至合并版。
 - NoAds 1.3.5-3-5：抖音模块完整替换为 DYYY 精简版 2.3-0.roothide，支持抖音标准版与极速版，包含去广告、播放倍速、界面隐藏、长按保存与复制文案等功能，使用 DYYY 内置设置。
 - Swiftgram 同时加载 Lead 与 KAlert，覆盖防撤回、编辑记录、隐藏故事等扩展功能。
 - 已加入 StressWatch 会员解锁，并优化插件体积与资源占用。
