@@ -37,7 +37,7 @@
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-7 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2.5 | RootHide arm64e |
-| roothide packages / Tweak / 插件 | iCleaner Pro | 7.10.0+customrules.4.rh8.2 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | iCleaner Pro | 7.10.05 | RootHide arm64e |
 
 ### NoAds
 
@@ -73,7 +73,8 @@ RootHide 去广告插件，包含应用去广告、功能扩展与独立开关�
 iOS 系统清理工具，整合自定义缓存与 Inbox 规则，适用于 RootHide / `iphoneos-arm64e`。
 
 - 包名：`com.sini.icleanerpro`
-- 版本：`7.10.0+customrules.4.rh8.2`
+- 版本：`7.10.05`
+- 二改作者：MikeHuang01。此版本更新至提供的 customrules RH8.3 构建。
 - 修复伪装后自定义规则失效问题。
 - 依赖：`rootless-compat (>= 0.9)`、`firmware (>= 15.0)`、`findutils`、`apt | apt7`
 
