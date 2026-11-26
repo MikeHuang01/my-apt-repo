@@ -15,7 +15,7 @@
         },
         { "class": "DepictionHeaderView", "title": "\u4fe1\u606f" },
         { "class": "DepictionSeparatorView" },
-        { "class": "DepictionTableTextView", "title": "\u7248\u672c", "text": "2.1.1+local.ui1" },
+        { "class": "DepictionTableTextView", "title": "\u7248\u672c", "text": "2.1.15" },
         { "class": "DepictionTableTextView", "title": "\u5305\u540d", "text": "com.mlgm.watchfix" },
         { "class": "DepictionTableTextView", "title": "\u67b6\u6784", "text": "iphoneos-arm64e" },
         { "class": "DepictionTableTextView", "title": "\u7ef4\u62a4\u8005", "text": "MikeHuang01 \u4fee\u590d\u7248" }
@@ -25,6 +25,13 @@
       "class": "DepictionStackView",
       "tabname": "\u66f4\u65b0\u65e5\u5fd7",
       "views": [
+        { "class": "DepictionHeaderView", "title": "2.1.15" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 优化安装包 XZ 压缩参数，降低安装解压阶段的内存需求。",
+          "useSpacing": true
+        },
         { "class": "DepictionHeaderView", "title": "2.1.1+local.ui1" },
         { "class": "DepictionSeparatorView" },
         {

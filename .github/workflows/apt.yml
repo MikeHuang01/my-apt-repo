@@ -64,6 +64,10 @@ jobs:
             -o APT::FTPArchive::Release::Label="⭐ MikeHuang01" \
             -o APT::FTPArchive::Release::Architectures="iphoneos-arm iphoneos-arm64 iphoneos-arm64e" \
             -o APT::FTPArchive::Release::Components="." \
+            -o APT::FTPArchive::Release::Suite="stable" \
+            -o APT::FTPArchive::Release::Codename="ios" \
+            -o APT::FTPArchive::Release::Version="1.0" \
+            -o APT::FTPArchive::Release::Description="MikeHuang01 越狱源：iOS RootHide / Rootless 软件包。" \
             release . > Release.tmp
           {
             printf 'Icon: https://mikehuang01.github.io/my-apt-repo/Icons/RepoIcon-20261106-v4.png\n'
@@ -87,6 +91,10 @@ jobs:
             -o APT::FTPArchive::Release::Label="⭐ MikeHuang01" \
             -o APT::FTPArchive::Release::Architectures="iphoneos-arm iphoneos-arm64 iphoneos-arm64e" \
             -o APT::FTPArchive::Release::Components="." \
+            -o APT::FTPArchive::Release::Suite="stable" \
+            -o APT::FTPArchive::Release::Codename="ios" \
+            -o APT::FTPArchive::Release::Version="1.0" \
+            -o APT::FTPArchive::Release::Description="MikeHuang01 越狱源：iOS RootHide / Rootless 软件包。" \
             release . > Release.tmp
           {
             printf 'Icon: https://mikehuang01.github.io/my-apt-repo/v2/Icons/RepoIcon-20261106-v4.png\n'
@@ -110,6 +118,10 @@ jobs:
             -o APT::FTPArchive::Release::Label="⭐ MikeHuang01" \
             -o APT::FTPArchive::Release::Architectures="iphoneos-arm iphoneos-arm64 iphoneos-arm64e" \
             -o APT::FTPArchive::Release::Components="." \
+            -o APT::FTPArchive::Release::Suite="stable" \
+            -o APT::FTPArchive::Release::Codename="ios" \
+            -o APT::FTPArchive::Release::Version="1.0" \
+            -o APT::FTPArchive::Release::Description="MikeHuang01 越狱源：iOS RootHide / Rootless 软件包。" \
             release . > Release.tmp
           {
             printf 'Icon: https://mikehuang01.github.io/my-apt-repo/v3/Icons/RepoIcon-20261106-v4.png\n'

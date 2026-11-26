@@ -39,7 +39,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "版本",
-          "text": "1.6.0-6.6"
+          "text": "1.6.0-7"
         },
         {
           "class": "DepictionTableTextView",
@@ -64,7 +64,7 @@
       "views": [
         {
           "class": "DepictionHeaderView",
-          "title": "1.6.0-6.6"
+          "title": "1.6.0-7"
         },
         {
           "class": "DepictionSeparatorView"
