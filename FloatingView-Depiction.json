@@ -39,7 +39,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "版本",
-          "text": "1.6.0-6.5"
+          "text": "1.6.0-6.6"
         },
         {
           "class": "DepictionTableTextView",
@@ -62,6 +62,18 @@
       "class": "DepictionStackView",
       "tabname": "更新日志",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.6.0-6.6"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 优化安装包 XZ 压缩参数，降低安装解压阶段的内存需求。",
+          "useSpacing": true
+        },
         {
           "class": "DepictionHeaderView",
           "title": "1.6.0-6.5"

@@ -33,7 +33,7 @@
 | --- | --- | --- | --- |
 | roothide packages / 工具 | Filza All-in-One | 4.0.1-4 | RootHide arm64e |
 | 插件 | WatchFix | 2.1.1+local.ui1 | RootHide arm64e |
-| roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6.5 | RootHide arm64e |
+| roothide packages / Tweak / 插件 | FloatingView | 1.6.0-6.6 | RootHide arm64e |
 | roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-7 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2.5 | RootHide arm64e |
@@ -82,7 +82,8 @@ iOS 系统清理工具，整合自定义缓存与 Inbox 规则，适用于 RootH
 保留基本的浮窗功能，删除原有的三屏和 ARC 功能。
 
 - 包名：`com.be-huge.floating-view`
-- 版本：`1.6.0-6.5`
+- 版本：`1.6.0-6.6`
+- 1.6.0-6.6：优化安装包 XZ 压缩参数，降低安装解压阶段的内存需求。
 - sidebar25：修复侧边栏手势取消后的布局提交，并跳过不再使用的 HID 回调资源创建与清理。
 - 适用环境：RootHide，`iphoneos-arm64e`
 - 安装后从“设置 → floating-view”启用浮窗并调整浮窗参数。
