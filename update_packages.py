@@ -24,5 +24,9 @@ for entry in entries:
         lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/WatchFix-Depiction.json")
     if lines[0] == "Package: com.sini.icleanerpro":
         lines.append("SileoDepiction: https://mikehuang01.github.io/my-apt-repo/iCleaner-Pro-Depiction.json")
+    if lines[0] == "Package: com.mikehuang01.qxas2" and not any(
+        line.startswith("SileoDepiction:") for line in lines
+    ):
+        lines.append("SileoDepiction: https://raw.githubusercontent.com/MikeHuang01/my-apt-repo/main/QXAS-Depiction.json")
     output.append("\n".join(lines))
 path.write_text("\n\n".join(output).rstrip() + "\n", encoding="utf-8")

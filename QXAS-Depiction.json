@@ -1,0 +1,79 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "详情",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "QX 自动优选"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Quantumult X 的故障切换助手。当前节点能测通就不换，不因延迟偏高而切换。\n- 每分钟检查当前节点；连续两次确认失败后，才分批测速候选。\n- 优先同地区及近期成功切换过的候选，切换前回读策略，避免覆盖已经检测到的手动选择。\n- 成功切换后冷却 3 分钟；关闭自动优选会尝试还原插件改写的配置。\n- 运行需要 QX VPN 和计划任务开启，并在 QX 请求列表确认 `QXAS-Controller` 已加载。",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "第一次使用"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "1. 先断开 QX VPN，开启「自动优选」，等日志显示任务已写入配置。\n2. 打开 QX VPN 和计划任务总开关，在请求列表确认 `QXAS-Controller` 出现且启用。没有出现就完全退出 QX 后重新打开，再看一次。",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "插件信息"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "版本",
+          "text": "1.1.46"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "包名",
+          "text": "com.mikehuang01.qxas2"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "架构",
+          "text": "iphoneos-arm64e"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "环境",
+          "text": "RootHide / iOS 15+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "作者",
+          "text": "MikeHuang01"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "[下载重建源码 ZIP](https://github.com/MikeHuang01/my-apt-repo/blob/main/sources/QXAS_1.1.46_post-cleanup_sources.zip)",
+          "useSpacing": true
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "更新日志",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.1.46"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "更新使用说明和「关于」大小写显示。精简重复构建代码和日志裁剪开销，故障切换规则不变。本次精简构建已通过本地回归及双架构包校验，尚未经 iOS 真机验收。",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

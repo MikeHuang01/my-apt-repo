@@ -38,6 +38,20 @@
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-7 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2.5 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | iCleaner Pro | 7.10.05 | RootHide arm64e |
+| roothide packages / 应用插件 | QX 自动优选 | 1.1.46 | RootHide arm64e，iOS 15+ |
+
+### QX 自动优选（QXAS）
+
+Quantumult X 的故障切换助手。当前节点能测通就不换，不因延迟偏高而切换。
+- 每分钟检查当前节点；连续两次确认失败后，才分批测速候选。
+- 优先同地区及近期成功切换过的候选，切换前回读策略，避免覆盖已经检测到的手动选择。
+- 成功切换后冷却 3 分钟；关闭自动优选会尝试还原插件改写的配置。
+- 运行需要 QX VPN 和计划任务开启，并在 QX 请求列表确认 `QXAS-Controller` 已加载。
+
+- 包名：`com.mikehuang01.qxas2`；作者：`MikeHuang01`
+- 版本：`1.1.46`；架构：`iphoneos-arm64e`；包声明依赖：`firmware (>= 15.0)`
+- [DEB 安装包](com.mikehuang01.qxas2_1.1.46_iphoneos-arm64e.deb) · [精简后源码 ZIP](sources/QXAS_1.1.46_post-cleanup_sources.zip) · [Sileo 详情](QXAS-Depiction.json)
+- 精简构建保留原故障切换逻辑；已通过本地回归与双架构校验，尚未进行该构建的 iOS 真机验收。源码为工作区重建内容，不含外部保留对象、Theos 工具链或 iOS SDK。
 
 ### NoAds
 
