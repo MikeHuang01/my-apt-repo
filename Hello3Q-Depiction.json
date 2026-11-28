@@ -39,7 +39,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "版本",
-          "text": "2.5+mike.13"
+          "text": "2.5-15"
         },
         {
           "class": "DepictionTableTextView",
@@ -55,6 +55,24 @@
           "class": "DepictionTableTextView",
           "title": "作者",
           "text": "zqbb / MikeHuang01二改"
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "更新日志",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "2.5-15"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 重压缩安装包，体积减少 6.33%（提供的重压缩包：9228 字节）；最终版本包为 9222 字节（较旧版减少 6.39%）。",
+          "useSpacing": true
         }
       ]
     }

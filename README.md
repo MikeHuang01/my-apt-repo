@@ -34,7 +34,7 @@
 | roothide packages / 工具 | Filza All-in-One | 4.0.1-4 | RootHide arm64e |
 | 插件 | WatchFix | 2.1.15 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | FloatingView | 1.6.0-7 | RootHide arm64e |
-| roothide packages / Tweak | Hello 3Q | 2.5+mike.13 | RootHide arm64e |
+| roothide packages / Tweak | Hello 3Q | 2.5-15 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | NoAds | 1.3.5-3-7 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | ActionBar Reborn | 1.1-2.5 | RootHide arm64e |
 | roothide packages / Tweak / 插件 | iCleaner Pro | 7.10.05 | RootHide arm64e |
@@ -109,6 +109,8 @@ iOS 系统清理工具，整合自定义缓存与 Inbox 规则，适用于 RootH
 拦截后台热加载 App（节约内存、少杀后台），按 Bundle ID 放行指定应用。
 
 - 包名：`cn.zqbb.stopautolaunchapps`
+- 版本：`2.5-15`
+- 2.5-15：重压缩安装包，体积减少 6.33%（提供的重压缩包：9228 字节）；最终版本包为 9222 字节（较旧版减少 6.39%）。
 - 适用环境：RootHide，`iphoneos-arm64e`
 - 依赖：`mobilesubstrate (>= 0.9.5000)`、`firmware (>= 16.0)`
 - 配置文件：`/var/containers/Bundle/Application/jbroot-*/var/mobile/Library/Preferences/Hello3Q-allowlist.conf`
